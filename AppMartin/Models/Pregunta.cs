@@ -11,10 +11,13 @@ namespace AppMartin.Models
     {
         public int PreguntaID { get; set; }
         public string Contenido { get; set; }
+
         [DisplayName("Respuesta Correcta")]
         public int RespuestaID { get; set; }
+
         [ForeignKey("RespuestaID")]
         public virtual Respuesta RespuestaCorrecta { get; set; }
+
         public virtual ICollection<Respuesta> Respuestas { get; set; }
     }
 }
